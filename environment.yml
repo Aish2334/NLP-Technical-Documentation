@@ -37,7 +37,7 @@ dependencies:
     - CoreNLP
     - spacy==3.2.3
     - pattern
-    - BERTopic
+    - bertopic[gensim]
     - Scattertext
     - LDA
     - Texthero
