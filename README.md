@@ -3,7 +3,7 @@
 ## Method 1: Install virtual environment using `environment.yml` (recommended)
 ### 1. Install virtual environment
 ```console
-conda env create --file environment.yml #a virtual environment named `chatbot_venv` and it's dependencies will be created
+conda env create --file environment.yml #a virtual environment named `nlp_techdoc_venv` and it's dependencies will be created
 ```
 
 ### 2. Rename conda environment
