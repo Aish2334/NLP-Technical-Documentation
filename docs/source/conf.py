@@ -15,10 +15,10 @@ version = '0.1.0'
 version: 2
 
 # Set the version of Python and other tools you might need
-build:
-  os: ubuntu-20.04
-  tools:
-    python: "3.9"
+#build:
+#  os: ubuntu-20.04
+#  tools:
+#    python: "3.9"
     # You can also specify other tool versions:
     # nodejs: "16"
     # rust: "1.55"
