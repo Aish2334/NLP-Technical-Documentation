@@ -20,6 +20,8 @@ Natural Language Processing Applications
 	
   * :doc:`Latent Dirichlet Allocation`
   * :doc:`Non-Matrix Factorization`
+  * :doc:`BERTopic`
+  * :doc:`Top2Vec`
 
 * Sentiment Analysis
 
@@ -29,8 +31,8 @@ Topic Modelling
 
 
 .. toctree::
-   :caption: Topic Modelling
+   :caption: Applications
    :maxdepth: 2
    
-   Latent Dirichlet Allocation
-   Non-Matrix Factorization
+   Topic Modelling/Latent Dirichlet Allocation
+   Topic Modelling/Non-Matrix Factorization
