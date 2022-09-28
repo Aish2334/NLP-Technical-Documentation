@@ -17,6 +17,7 @@ Contents
 --------
 
 .. toctree::
+   maxdepth: 8
 
-   usage
-   api
+   Topic Modelling/Latent Dirichlet Allocation
+   Topic Modelling/Non-Matrix Factorization
