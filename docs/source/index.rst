@@ -26,12 +26,10 @@ Natural Language Processing Applications
 	* :doc:`Sentiment Analysis`
 
 
-
-
 .. toctree::
    :caption: Applications
-   :maxdepth: 3
+   :maxdepth: 2
    
-   Topic Modelling 
-   Sentiment Analysis   
+      Topic Modelling 
+      Sentiment Analysis   
 

@@ -14,5 +14,6 @@ how to :ref:`installation` the project.
 .. toctree::
 :caption: Sentiment Analysis
 :maxdepth: 2
+
       Latent Dirichlet Allocation
       Non-Matrix Factorization
