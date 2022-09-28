@@ -17,7 +17,8 @@ Contents
 --------
 
 .. toctree::
-   maxdepth: 8
+   :caption: Table of Contents
+   :maxdepth: 8
 
    Topic Modelling/Latent Dirichlet Allocation
    Topic Modelling/Non-Matrix Factorization
