@@ -1,2 +1,0 @@
-Latent Dirichlet Allocation
-===================================

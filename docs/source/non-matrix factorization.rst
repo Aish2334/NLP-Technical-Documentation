@@ -1,2 +1,0 @@
-Non-Matrix Factorization
-===================================
