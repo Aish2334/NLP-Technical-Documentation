@@ -13,8 +13,6 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-List of Applications
--------------------------------------------
 	
 	* :doc:`Topic Modelling` 
 	* :doc:`Sentiment Analysis`
@@ -23,9 +21,7 @@ List of Applications
 .. toctree::
    :caption: Applications
    :maxdepth: 2
-   :glob:
-   :titlesonly:
    
-      :doc:`Topic Modelling` 
-      :doc:`Sentiment Analysis`  
+      Topic Modelling
+      Sentiment Analysis  
 
