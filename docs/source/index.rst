@@ -16,6 +16,14 @@ how to :ref:`installation` the project.
 Contents
 --------
 
+* Topic Modelling
+	
+  * :doc:`Latent Dirichlet Allocation`
+  * :doc:`Non-Matrix Factorization`
+
+* Sentiment Analysis
+
+
 Topic Modelling
 --------
 
@@ -24,5 +32,5 @@ Topic Modelling
    :caption: Topic Modelling
    :maxdepth: 2
    
-   LatentDirichletAllocation
-   NonMatrixFactorization
+   Latent Dirichlet Allocation
+   Non-Matrix Factorization
