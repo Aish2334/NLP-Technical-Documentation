@@ -19,7 +19,7 @@ how to :ref:`installation` the project.
 
 
 .. toctree::
-   :caption: Applications
+   :caption: Natural Language Processing!
    :maxdepth: 2
    
       Topic Modelling
