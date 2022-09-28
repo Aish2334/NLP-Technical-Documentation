@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+Natural Language Processing!
 ===================================
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
@@ -13,13 +13,11 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Natural Language Processing Applications
+List of Applications
 -------------------------------------------
-
-	* :doc:`Applications`
 	
-	  - :doc:`Topic Modelling` 
-	  - :doc:`Sentiment Analysis`
+	* :doc:`Topic Modelling` 
+	* :doc:`Sentiment Analysis`
 
 
 .. toctree::
@@ -28,11 +26,6 @@ Natural Language Processing Applications
    :glob:
    :titlesonly:
    
-      Topic Modelling 
-      Sentiment Analysis   
+      :doc:`Topic Modelling` 
+      :doc:`Sentiment Analysis`  
 
-Topic Modelling 
--------------------------------------------
-
-Sentiment Analysis
--------------------------------------------
