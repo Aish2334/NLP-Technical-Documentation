@@ -32,11 +32,13 @@ Natural Language Processing Applications
    :caption: Applications
    :maxdepth: 3
    
-   Topic Modelling  
-   Sentiment Analysis   
+   Topic Modelling 
 
-.. toctree::
+   .. toctree::
    :caption: Topic Modelling
    :maxdepth: 2
-   Latent Dirichlet Allocation
-   Non-Matrix Factorization
+      Latent Dirichlet Allocation
+      Non-Matrix Factorization
+
+   Sentiment Analysis   
+
