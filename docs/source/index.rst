@@ -34,5 +34,14 @@ Topic Modelling
    :caption: Applications
    :maxdepth: 2
    
-   Topic Modelling/Latent Dirichlet Allocation
-   Topic Modelling/Non-Matrix Factorization
+   Topic Modelling
+   ..toctree::
+   :maxdepth: 2
+      Latent Dirichlet Allocation
+      Non-Matrix Factorization    
+
+   Sentiment Analysis
+   ..toctree::
+   :maxdepth: 2
+      Latent Dirichlet Allocation
+      Non-Matrix Factorization 
