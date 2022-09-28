@@ -14,6 +14,7 @@ how to :ref:`installation` the project.
 .. toctree::
 	:caption: Topic Modelling
 	:maxdepth: 2
+	:hidden:
 
     	Latent Dirichlet Allocation
         Non-Matrix Factorization
