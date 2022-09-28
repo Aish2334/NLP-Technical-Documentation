@@ -1,5 +1,5 @@
 Non-Matrix Factorization
-===================================
+****************************
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
 that creates recipes mixing random ingredients.
