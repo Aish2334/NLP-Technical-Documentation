@@ -13,7 +13,7 @@ how to :ref:`installation` the project.
 
    This project is under active development.
 
-Contents
+Natural Language Processing Applications
 --------
 
 * Topic Modelling
