@@ -21,8 +21,8 @@ Topic Modelling
 
 
 .. toctree::
-   :caption: Table of Contents
+   :caption: Topic Modelling
    :maxdepth: 2
    
-   TopicModelling/LatentDirichletAllocation
-   TopicModelling/NonMatrixFactorization
+   LatentDirichletAllocation
+   NonMatrixFactorization
