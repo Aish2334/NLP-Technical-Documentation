@@ -16,6 +16,12 @@ how to :ref:`installation` the project.
 Natural Language Processing Applications
 -------------------------------------------
 
+	* :doc:`Applications`
+	
+	  - :doc:`Topic Modelling`
+	  - :doc:`Sentiment Analysis`
+
+
 .. toctree::
    :caption: Applications
    :maxdepth: 2
