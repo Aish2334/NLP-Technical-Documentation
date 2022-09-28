@@ -32,13 +32,9 @@ Natural Language Processing Applications
    :maxdepth: 3
    
    Topic Modelling
-   ..toctree::
-   :maxdepth: 2
-      Latent Dirichlet Allocation
-      Non-Matrix Factorization    
+   Topic Modelling/Latent Dirichlet Allocation
+   Topic Modelling/Non-Matrix Factorization    
 
    Sentiment Analysis
-   ..toctree::
-   :maxdepth: 2
-      Latent Dirichlet Allocation
-      Non-Matrix Factorization 
+   Sentiment Analysis/Latent Dirichlet Allocation
+   Sentiment Analysis/Non-Matrix Factorization 
