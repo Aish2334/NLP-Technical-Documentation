@@ -16,10 +16,15 @@ how to :ref:`installation` the project.
 Contents
 --------
 
+Latent Dirichlet Allocation
+--------
+
+Non-Matrix Factorization
+--------
+
 .. toctree::
    :caption: Table of Contents
-   :maxdepth: 8
+   :maxdepth: 2
    
-   toc_tree_topic_modelling.rst
-   LatentDirichletAllocation.rst
-   NonMatrixFactorization.rst
+   LatentDirichletAllocation
+   NonMatrixFactorization
