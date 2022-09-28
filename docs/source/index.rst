@@ -16,16 +16,6 @@ how to :ref:`installation` the project.
 Natural Language Processing Applications
 -------------------------------------------
 
-	* :doc:`Topic Modelling`
-	
-	  - :doc:`Latent Dirichlet Allocation`
-	  - :doc:`Non-Matrix Factorization`
-	  - :doc:`BERTopic`
-	  - :doc:`Top2Vec`
-
-	* :doc:`Sentiment Analysis`
-
-
 .. toctree::
    :caption: Applications
    :maxdepth: 2

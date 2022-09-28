@@ -9,11 +9,7 @@ and offers a *simple* and *intuitive* API.
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
-Topic Modelling Methods
---------
 
-	* :doc:`Latent Dirichlet Allocation`
-	* :doc:`Non-Matrix Factorization`
 
 .. toctree::
 	:caption: Topic Modelling
