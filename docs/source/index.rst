@@ -25,7 +25,8 @@ Natural Language Processing Applications
 .. toctree::
    :caption: Applications
    :maxdepth: 2
-   :hidden:
+   :glob:
+   :titlesonly:
    
       Topic Modelling 
       Sentiment Analysis   
