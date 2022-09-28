@@ -1,4 +1,4 @@
-Topic Modelling
+Sentiment Analysis
 ---------------------------
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
@@ -12,7 +12,7 @@ how to :ref:`installation` the project.
 
 
 .. toctree::
-:caption: Topic Modelling
+:caption: Sentiment Analysis
 :maxdepth: 2
       Latent Dirichlet Allocation
       Non-Matrix Factorization
