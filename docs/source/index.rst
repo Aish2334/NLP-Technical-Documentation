@@ -19,9 +19,7 @@ Contents
 .. toctree::
    :caption: Table of Contents
    :maxdepth: 8
-   /top
-   Index.rst
-	   /Topic Modelling
-	   toc_tree_topic_modelling.rst
-	   LatentDirichletAllocation.rst
-	   NonMatrixFactorization.rst
+   
+   toc_tree_topic_modelling.rst
+   LatentDirichletAllocation.rst
+   NonMatrixFactorization.rst
