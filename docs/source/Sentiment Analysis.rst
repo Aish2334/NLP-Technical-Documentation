@@ -16,8 +16,8 @@ Sentiment Analysis Methods
 	* :doc:`Non-Matrix Factorization`
 
 .. toctree::
-:caption: Sentiment Analysis
-:maxdepth: 2
+	:caption: Sentiment Analysis
+	:maxdepth: 2
 
-      Latent Dirichlet Allocation
-      Non-Matrix Factorization
+    	Latent Dirichlet Allocation
+    	Non-Matrix Factorization
