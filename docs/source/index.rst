@@ -14,12 +14,15 @@ how to :ref:`installation` the project.
    This project is under active development.
 
 	
+Applications
+-----------------
+
 	* :doc:`Topic Modelling` 
 	* :doc:`Sentiment Analysis`
 
 
 .. toctree::
-   :caption: Natural Language Processing!
+   :caption: Applications
    :maxdepth: 2
    
       Topic Modelling
