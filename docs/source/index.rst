@@ -22,9 +22,11 @@ Applications
 
 
 .. toctree::
-   :caption: Applications
+   :caption: Natural Language Processing Applications
    :maxdepth: 2
+
+   intro
+   topic_modelling/index
+   sentiment_analysis/index
    
-      Topic Modelling
-      Sentiment Analysis  
 

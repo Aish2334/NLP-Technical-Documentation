@@ -15,5 +15,5 @@ how to :ref:`installation` the project.
 	:caption: Topic Modelling
 	:maxdepth: 2
 
-    Latent Dirichlet Allocation
-    Non-Matrix Factorization
+    latent_dirichlet_allocation
+    non_matrix_factorization
