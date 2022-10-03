@@ -1,4 +1,4 @@
-Natural Language Processing!
+Natural Language Processing
 ===================================
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
@@ -15,7 +15,6 @@ how to :ref:`installation` the project.
 
 
 .. toctree::
-   :caption: Natural Language Processing Applications
    :maxdepth: 2
 
    supervised_applications/index
