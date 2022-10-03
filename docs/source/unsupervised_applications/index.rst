@@ -15,11 +15,18 @@ how to :ref:`installation` the project.
 
 
 .. toctree::
-   :caption: Natural Language Processing Applications
    :maxdepth: 2
 
-   supervised_applications/index
-   unsupervised_applications/index
-   
-   
+   topic_modelling/index
+   text_extraction/index
+   sentiment_analysis/index
 
+   machine_translation/index
+   question_answering/index
+   chatbot/index
+   autocomplete/index
+   grammar_correction/index
+   summarization/index
+
+   fill_mask/index
+   sentence_similarity/index

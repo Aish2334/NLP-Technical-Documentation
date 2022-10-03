@@ -12,14 +12,3 @@ how to :ref:`installation` the project.
 .. note::
 
    This project is under active development.
-
-
-.. toctree::
-   :caption: Natural Language Processing Applications
-   :maxdepth: 2
-
-   supervised_applications/index
-   unsupervised_applications/index
-   
-   
-
