@@ -1,4 +1,4 @@
-Natural Language Processing!
+Unsupervised Applications
 ===================================
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
