@@ -1,4 +1,4 @@
-Natural Language Processing!
+Intent Classification
 ===================================
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers

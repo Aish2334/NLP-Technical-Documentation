@@ -6,6 +6,7 @@ ABCD
 .. toctree::
    :maxdepth: 2
 
+   intro
    supervised_applications/index
    unsupervised_applications/index
    

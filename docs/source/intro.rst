@@ -1,4 +1,4 @@
-Classification
+Introduction
 ===================================
 
 **Lumache** (/lu'make/) - Python library for cooks and food lovers
