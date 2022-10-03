@@ -14,5 +14,5 @@ how to :ref:`installation` the project.
 .. toctree::
 	:maxdepth: 2
 
-    latent_dirichlet_allocation
-    non_matrix_factorization
+    topic_modelling/latent_dirichlet_allocation
+    topic_modelling/non_matrix_factorization
