@@ -9,7 +9,7 @@ _____________
 * **Latent**: Latent refers to anything that is 'hidden' in the data. In this technique, the topics within the document are not known, but it is assumed that they are present since the text is generated based on the topics.
 
 * **Dirichlet**: Dirichlet is a distribution of distributions.
-        *For Example*:
+  *For Example*:
    Let's say we have a machine that produces dice and each dice will have 6 unbiased sides. Additionally, we can control whether a machine will produce a dice. 
 			 
    In this scenario, the machine producing dice is considered as a distribution since it can produce different types of dice. The dice itself would be a distribution as each dice has 6 possible face values. This is a case of Dirichlet distribution or a 'distribution of distributions'.
@@ -30,10 +30,10 @@ ___________________
 
 * **Document-topic density factor (‘α’)**
 	The ‘α’ hyperparameter determines how many topics would exist in the document corpus. A low value of ‘α’ would mean fewer topics in the document mix and vice versa
-	Also known as the concentration parameter, following are the possible types of ‘α’ distribution:\
-	Uniform (α =1),\
-	Concentrated (α > 1),\
-	Sparse (α < 1)
+	Also known as the concentration parameter, following are the possible types of ‘α’ distribution:
+	* Uniform (α =1)
+	* Concentrated (α > 1)
+	* Sparse (α < 1)
 
 * **Topic-word density factor (‘β’)**
     The ‘β’ hyperparameter determines how many words are distributed to each topic. Topics with lower value of ‘β’ will have fewer words and vice versa. Like α, β can take values between 0 and 1.
@@ -58,7 +58,7 @@ To improve on this random assignment, for each document d, we go through each wo
    **P(word w | topic t)**: represents the proportion of assignments to topic t, over all documents d, that comes from word w.
 
 *Step-4*:
-Reassign word w a new topic t’, where we choose topic t’ with probability p(topic t’ | document d)* p(word w | topic t’)
+Reassign word w a new topic t’, where we choose topic t’ with probability p(topic t’ | document d)* p(word w | topic t’).
 This generative model predicts the probability that topic t’ generate word w.
 
 *Step-5*:
@@ -67,7 +67,8 @@ Repeating step-4 a large number of times, up to we reach a steady-state and at t
 *Step-6*:
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
-.. image:: lda_algorithm_flowchart.png
+.. image:: /lda_algorithm_flowchart.png
+
 
 Model Execution
 ___________________
@@ -82,10 +83,10 @@ Add text here
 Disadvantages
 ___________________
 
-#. *LDA results may not be robust* - Documents with identical wording may be stated as having wildly different topical content. Since LDA results are probabilistic, we wouldn’t necessarily expect identically-worded documents to have the exact same topical distributions. In the event that this happens, it becomes difficult to differentiate between such documents. 
+* *LDA results may not be robust* - Documents with identical wording may be stated as having wildly different topical content. Since LDA results are probabilistic, we wouldn’t necessarily expect identically-worded documents to have the exact same topical distributions. In the event that this happens, it becomes difficult to differentiate between such documents. 
 
 
-#. *LDA results may not be explicable* - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
+* *LDA results may not be explicable* - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
 
    Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon
 
