@@ -1,10 +1,9 @@
+****************************
 Latent Dirichlet Allocation
 ****************************
 
-**Lumache** (/lu'make/) - Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Introduction
+_____________
+
+* Latent: Latent refers to anything that is 'hidden' in the data. In this technique, the topics within the document are not known, but it is assumed that they are present since the text is generated based on the topics.
