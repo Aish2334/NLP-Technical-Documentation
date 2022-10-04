@@ -3,7 +3,6 @@ Latent Dirichlet Allocation
 ****************************
 
 
- .. image:: /files/pics/pics/lda_overall_view.png
 
 Introduction
 _____________
