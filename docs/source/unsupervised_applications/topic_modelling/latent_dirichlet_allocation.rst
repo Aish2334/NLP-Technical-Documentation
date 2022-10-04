@@ -17,3 +17,11 @@ _____________
 * **Allocation**: Once we have a Dirichlet distribution, we allocate topics to documents and words of 	
                   the document to topics.
 
+Assumptions
+_____________
+
+#. LDA assumes that every chunk of text/document fed into it has words associated with each other.
+#. It also assumes documents are produced from a mixture of topics. These topics then generate words  
+   based on their probability distribution.
+
+.. image:: /unsupervised_applications/topic_modelling/lda_overall_view.jpg
