@@ -22,7 +22,7 @@ _____________
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
 
-.. figure:: //files/pics/lda_overall_view.png
+.. image:: //files/pics/lda_overall_view.png
 
 Default Parameters
 ___________________
@@ -61,12 +61,12 @@ Reassign word w a new topic t’, where we choose topic t’ with probability p(
 This generative model predicts the probability that topic t’ generate word w.
 
 *Step-5*:
-Repeating step-4 a large number of times, up to we reach a steady-state and at that state the topic assignments are pretty good. And finally, we use these assignments to determine the topic mixtures of each document.
+Repeating Step-4 a large number of times, up to we reach a steady-state and at that state the topic assignments are pretty good. And finally, we use these assignments to determine the topic mixtures of each document.
 
 *Step-6*:
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
-.. figure:: //files/pics/lda_algorithm_flowchart.png
+.. image:: //files/pics/lda_algorithm_flowchart.png
 
 
 Model Execution
