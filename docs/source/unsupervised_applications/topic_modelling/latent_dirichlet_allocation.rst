@@ -88,5 +88,5 @@ ___________________
 
     - Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon.
      
-   Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
+  Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
 
