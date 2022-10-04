@@ -31,9 +31,9 @@ ___________________
 * **Document-topic density factor (‘α’)**
 	The ‘α’ hyperparameter determines how many topics would exist in the document corpus. A low value of ‘α’ would mean fewer topics in the document mix and vice versa
 	Also known as the concentration parameter, following are the possible types of ‘α’ distribution:
-	* Uniform (α =1)
-	* Concentrated (α > 1)
-	* Sparse (α < 1)
+		- Uniform (α =1)
+		- Concentrated (α > 1)
+		- Sparse (α < 1)
 
 * **Topic-word density factor (‘β’)**
     The ‘β’ hyperparameter determines how many words are distributed to each topic. Topics with lower value of ‘β’ will have fewer words and vice versa. Like α, β can take values between 0 and 1.
@@ -85,10 +85,9 @@ ___________________
 
 * *LDA results may not be robust* - Documents with identical wording may be stated as having wildly different topical content. Since LDA results are probabilistic, we wouldn’t necessarily expect identically-worded documents to have the exact same topical distributions. In the event that this happens, it becomes difficult to differentiate between such documents. 
 
-
 * *LDA results may not be explicable* - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
 
-   Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon
+Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon
 
-   Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
+Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
 
