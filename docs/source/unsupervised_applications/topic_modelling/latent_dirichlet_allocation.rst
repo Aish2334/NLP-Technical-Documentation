@@ -52,9 +52,9 @@ With the help of random assignment, we got the topic representations for all the
 *Step-3*:
 To improve on this random assignment, for each document d, we go through each word w and compute the following:
 
-   **P(topic t | document d)**: represents the proportion of words present in document d that are assigned to topic t of the corpus.
+   **P (topic t | document d)**: represents the proportion of words present in document d that are assigned to topic t of the corpus.
 
-   **P(word w | topic t)**: represents the proportion of assignments to topic t, over all documents d, that comes from word w.
+   **P (word w | topic t)**: represents the proportion of assignments to topic t, over all documents d, that comes from word w.
 
 *Step-4*:
 Reassign word w a new topic t’, where we choose topic t’ with probability p(topic t’ | document d)* p(word w | topic t’).
@@ -86,6 +86,8 @@ ___________________
 
 * *LDA results may not be explicable* - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
 
-   - Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon.
-     Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
+    Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon.
+     
+
+Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
 
