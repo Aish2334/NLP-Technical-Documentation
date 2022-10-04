@@ -23,16 +23,16 @@ _____________
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
 
-.. image:: files/pics/lda_overall_view.png
+.. image:: lda_overall_view.png
 
 Default Parameters
 ___________________
 
 * **Document-topic density factor (‘α’)**
 	The ‘α’ hyperparameter determines how many topics would exist in the document corpus. A low value of ‘α’ would mean fewer topics in the document mix and vice versa
-	Also known as the concentration parameter, following are the possible types of ‘α’ distribution:
-	Uniform (α =1),
-	Concentrated (α > 1),
+	Also known as the concentration parameter, following are the possible types of ‘α’ distribution:\
+	Uniform (α =1),\
+	Concentrated (α > 1),\
 	Sparse (α < 1)
 
 * **Topic-word density factor (‘β’)**
@@ -67,7 +67,7 @@ Repeating step-4 a large number of times, up to we reach a steady-state and at t
 *Step-6*:
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
-.. image:: files/pics/lda_algorithm_flowchart.png
+.. image:: lda_algorithm_flowchart.png
 
 Model Execution
 ___________________
