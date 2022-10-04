@@ -44,27 +44,27 @@ ___________________
 Algorithm Explained
 ___________________
 
-*Step-1*
+*Step-1*:
 Go through each of the documents in a corpus and randomly assign each word in the document to one of K topics (K is chosen beforehand or given by the user).
 
-*Step-2*
+*Step-2*:
 With the help of random assignment, we got the topic representations for all the documents and word distributions of all the topics, but these are not very good ones.
 
-*Step-3*
+*Step-3*:
 To improve on this random assignment, for each document d, we go through each word w and compute the following:
 
-**P(topic t | document d)**: represents the proportion of words present in document d that are assigned to topic t of the corpus.
+   **P(topic t | document d)**: represents the proportion of words present in document d that are assigned to topic t of the corpus.
 
-**P(word w | topic t)**: represents the proportion of assignments to topic t, over all documents d, that comes from word w.
+   **P(word w | topic t)**: represents the proportion of assignments to topic t, over all documents d, that comes from word w.
 
-*Step-4*
+*Step-4*:
 Reassign word w a new topic t’, where we choose topic t’ with probability p(topic t’ | document d)* p(word w | topic t’)
 This generative model predicts the probability that topic t’ generate word w.
 
-*Step-5*
+*Step-5*:
 Repeating step-4 a large number of times, up to we reach a steady-state and at that state the topic assignments are pretty good. And finally, we use these assignments to determine the topic mixtures of each document.
 
-*Step-6*
+*Step-6*:
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
 .. image:: /files/pics/lda_algorithm_flowchart.png
@@ -82,11 +82,12 @@ Add text here
 Disadvantages
 ___________________
 
-#. LDA results may not be robust - Documents with identical wording may be stated as having wildly different topical content. Since LDA results are probabilistic, we wouldn’t necessarily expect identically-worded documents to have the exact same topical distributions. In the event that this happens, it becomes difficult to differentiate between such documents. 
+#. *LDA results may not be robust* - Documents with identical wording may be stated as having wildly different topical content. Since LDA results are probabilistic, we wouldn’t necessarily expect identically-worded documents to have the exact same topical distributions. In the event that this happens, it becomes difficult to differentiate between such documents. 
 
-#. LDA results may not be explicable - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
 
-Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon
+#. *LDA results may not be explicable* - The results of an LDA give probability distributions for the topics over the vocabulary. In order to understand what each topic is about 'semantically', we can list the words in order of decreasing probability, and look at the top j words per topic for some j. Thus, we are looking at a list of words that is somehow representative of this topic. But these words typically don’t fit together in an easily-comprehensible way. We don’t usually get a list like:
 
-Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
+   Topic x: banana, orange, grapefruit, peel, vitamin, five, watermelon
+
+   Thus, we need to strongly rely on guess-work to find the best possible semantically appropriate topic for a set of its top words.
 
