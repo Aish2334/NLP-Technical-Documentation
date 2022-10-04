@@ -10,8 +10,7 @@ _____________
 
 * **Dirichlet**: Dirichlet is a distribution of distributions.
   *For Example*:
-   Let's say we have a machine that produces dice and each dice will have 6 unbiased sides. Additionally, we can control whether a machine will produce a dice. 
-			 
+   Let's say we have a machine that produces dice and each dice will have 6 unbiased sides. Additionally, we can control whether a machine will produce a dice. 	 
    In this scenario, the machine producing dice is considered as a distribution since it can produce different types of dice. The dice itself would be a distribution as each dice has 6 possible face values. This is a case of Dirichlet distribution or a 'distribution of distributions'.
 
 * **Allocation**: Once we have a Dirichlet distribution, we allocate topics to documents and words of the document to topics.
@@ -23,7 +22,7 @@ _____________
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
 
-.. image:: lda_overall_view.png
+.. figure:: lda_overall_view.png
 
 Default Parameters
 ___________________
@@ -67,7 +66,7 @@ Repeating step-4 a large number of times, up to we reach a steady-state and at t
 *Step-6*:
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
-.. image:: /lda_algorithm_flowchart.png
+.. figure:: /lda_algorithm_flowchart.png
 
 
 Model Execution
