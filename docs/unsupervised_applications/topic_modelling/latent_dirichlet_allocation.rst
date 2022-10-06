@@ -23,7 +23,7 @@ _____________
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
 
-.. image:: LDA_high_level_overview.png
+.. image:: ../pics/LDA_high_level_overview.jpeg
 
 
 Default Parameters
@@ -69,7 +69,7 @@ Repeating Step-4 a large number of times, up to we reach a steady-state and at t
 After completing a certain number of iterations, we achieved a steady state where the document topic and topic term distributions are fairly good. And this becomes the convergence point of LDA.
 
  
-.. image:: LDA_algorithm_flowchart.png
+.. image:: ../pics/LDA_algorithm_flowchart.jpeg
 
 
 Model Execution
