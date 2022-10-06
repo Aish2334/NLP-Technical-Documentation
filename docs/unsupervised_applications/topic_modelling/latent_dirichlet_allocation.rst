@@ -23,7 +23,7 @@ _____________
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
 
- .. image:: /files/pics/lda_overall_view.png
+.. image:: /files/pics/lda_overall_view.png
 
 Default Parameters
 ___________________
