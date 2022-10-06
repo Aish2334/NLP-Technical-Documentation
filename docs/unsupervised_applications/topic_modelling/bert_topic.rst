@@ -1,10 +1,13 @@
 BertTopic
 ****************************
 
-**Lumache** (/lu'make/) - Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+BERTopic is a topic modeling technique that leverages BERT embeddings and a class-based TF-IDF to create dense clusters allowing for easily interpretable topics whilst keeping important words in the topic descriptions.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+There are four key components used in BERTopic, those are:
+
+	* A transformer embedding model
+	* UMAP dimensionality reduction
+	* HDBSCAN clustering
+	* Cluster tagging using c-TF-IDF
+
+.. image:: ../pics/BERTopic_overall_flowchart.png
