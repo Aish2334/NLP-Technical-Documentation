@@ -24,7 +24,6 @@ _____________
    based on their probability distribution.
 
 .. image:: ../pics/LDA_high_level_overview.jpeg
-   (options)
 
 
 Default Parameters
@@ -71,7 +70,7 @@ After completing a certain number of iterations, we achieved a steady state wher
 
  
 .. image:: ../pics/LDA_algorithm_flowchart.jpeg
-   (options)
+   
 
 Model Execution
 ___________________
