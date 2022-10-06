@@ -21,4 +21,4 @@ Transformer Embedding
 ------------------------
 
 * The first step is to embed documents into dimensional vectors.
-* BERTopic supports several libraries (Sentence Transformers, Flair, SpaCy, Gensim, USE TF Hub) for encoding our text to dense vector embeddings. Of these, :ref:`Sentence Transformers <https://www.pinecone.io/learn/sentence-embeddings/>` library provides the most extensive library of high-performing sentence embedding models. 
+* BERTopic supports several libraries (Sentence Transformers, Flair, SpaCy, Gensim, USE TF Hub) for encoding our text to dense vector embeddings. Of these, :ref:`Sentence Transformers <https://www.pinecone.io/learn/sentence-embeddings/>`_ library provides the most extensive library of high-performing sentence embedding models. 
