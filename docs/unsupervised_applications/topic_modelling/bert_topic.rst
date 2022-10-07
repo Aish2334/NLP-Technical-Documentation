@@ -22,11 +22,20 @@ Transformer Embedding
 
 * The first step is to embed documents into dimensional vectors.
 * BERTopic supports several libraries (Sentence Transformers, Flair, SpaCy, Gensim, USE TF Hub) for encoding our text to dense vector embeddings. Of these, `Sentence Transformers`_ library provides the most extensive library of high-performing sentence embedding models. 
-* As the name implies, this embedding model works best for either sentences  or paragraphs. This means that whenever you have a set of documents, where each documents contains several paragraphs, BERTopic will struggle getting accurately extracting a topic from that document. Several paragraphs typically means several topics and BERTopic will assign only one topic to a document. Therefore, it is advised to split up longer documents into either sentences or paragraphs before embedding them. That way, BERTopic will have a much easier job identifying topics in isolation.
+* As the name implies, this embedding model works best for either sentences or paragraphs. This means that whenever you have a set of documents, where each document contains several paragraphs, BERTopic will struggle to accurately extract a topic from that document. Several paragraphs typically means several topics and BERTopic will assign only one topic to a document. Therefore, it is advised to split up longer documents into either sentences or paragraphs before embedding them. That way, BERTopic will have a much easier job identifying topics in isolation.
 
 * After building out embeddings, BERTopic compresses them into a lower-dimensional space. Thus, 384-dimensional vectors are transformed into two/three-dimensional vectors. To perform dimensionality reduction, we can use any of the popular choices such as `PCA`_, `tSNE`_, `UMAP`_, etc 
 
 UMAP
++++++++
+
++ Flexible non-linear dimension reduction algorithm
++ Learns the manifold structure of the data and find a low dimensional embedding that preserves the essential topological structure of that manifold
+
+.. image:: ../pics/BERTopic_UMAP_3D_diagram.png
+
+
+HDBSCAN Clustering
 +++++++
 
 
