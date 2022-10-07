@@ -38,7 +38,7 @@ UMAP
 HDBSCAN Clustering
 +++++++++++++++++++++
 
-+ `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors.
++ `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors
 + There are mainly two types of clustering methods:
 	- Flat or Hierarchical:
 		* ABCD
