@@ -40,12 +40,13 @@ HDBSCAN Clustering
 
 + `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors
 + There are mainly two types of clustering methods:
-	- Flat or Hierarchical:
-		* Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
+	* Flat or Hierarchical:
+		- Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
+
 
 		.. image:: ../pics/BERTopic_HDBSCAN_flat_or_hierarchical.png
 
-		
+
 
 
 
