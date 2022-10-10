@@ -13,7 +13,7 @@ There are four key components used in BERTopic, those are:
 	* HDBSCAN clustering
 	* Cluster tagging using c-TF-IDF
 
-.. image:: files/pics/BERTopic_overall_flowchart.png
+	.. image:: files/pics/BERTopic_overall_flowchart.png
 
 
 Transformer Embedding
@@ -32,7 +32,7 @@ UMAP
 + Flexible non-linear dimension reduction algorithm
 + Learns the manifold structure of the data and find a low dimensional embedding that preserves the essential topological structure of that manifold
 
-.. image:: files/pics/BERTopic_UMAP_3D_diagram.png
+	.. image:: files/pics/BERTopic_UMAP_3D_diagram.png
 
 
 HDBSCAN Clustering
