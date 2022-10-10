@@ -40,7 +40,9 @@ HDBSCAN Clustering
 ------------------------
 
 #. `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors.
-#. There are mainly two types of clustering methods
+
+#. There are mainly two types of clustering methods:
+
 	a) Flat or Hierarchical: Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
 
 	.. image:: files/pics/BERTopic_HDBSCAN_flat_or_hierarchical_2.png
@@ -89,11 +91,11 @@ Default Parameters
 ------------------------
 ------------------------
 
-#. Below is an overview of common functions in BERTopic:
+1) Below is an overview of common functions in BERTopic:
 
 .. image:: files/pics/BERTopic_default_params.png
 
-#. After having trained your BERTopic model, a number of attributes are saved within your model. These attributes, in part, refer to how model information is stored on an estimator during fitting. The attributes that you see below all end in _ and are public attributes that can be used to access model information.
+2) After having trained your BERTopic model, a number of attributes are saved within your model. These attributes, in part, refer to how model information is stored on an estimator during fitting. The attributes that you see below all end in _ and are public attributes that can be used to access model information.
 
 .. image:: files/pics/BERTopic_Additional_params.png
 
