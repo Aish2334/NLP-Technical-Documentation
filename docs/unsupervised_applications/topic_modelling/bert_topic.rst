@@ -49,6 +49,13 @@ HDBSCAN Clustering
 	.. image:: files/pics/BERTopic_Centroid_Density_cluster_2.png
 
 
+	1) HDBSCAN is a hierarchical, density-based method. 
+	2) This means that we can benefit from the easier tuning and visualization of hierarchical data, handle irregular cluster shapes, and identify outliers.
+	3) HDBSCAN will identify and pick high-density regions, and eventually combine data points in these selected regions
+
+	.. image:: files/pics/HDBSCAN_density_plot.png
+
+
 
 
 .. _Sentence Transformers: https://www.pinecone.io/learn/sentence-embeddings/
