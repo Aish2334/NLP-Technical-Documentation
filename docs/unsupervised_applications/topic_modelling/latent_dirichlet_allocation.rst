@@ -12,6 +12,7 @@ a) **Latent**: Latent refers to anything that is 'hidden' in the data. In this t
 b) **Dirichlet**: Dirichlet is a distribution of distributions.Let's say we have a machine that produces dice and each dice will have 6 unbiased sides. Additionally, we can control whether a machine will produce a dice. In this scenario, the machine producing dice is considered as a distribution since it can produce different types of dice. The dice itself would be a distribution as each dice has 6 possible face values. This is a case of Dirichlet distribution or a 'distribution of distributions'.
 
 c) **Allocation**: Once we have a Dirichlet distribution, we allocate topics to documents and words of the document to topics.
+
 .. image:: files/pics/LDA_high_level_overview_2.png
 
 Assumptions
