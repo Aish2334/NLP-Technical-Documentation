@@ -13,7 +13,7 @@ There are four key components used in BERTopic, those are:
 	* HDBSCAN clustering
 	* Cluster tagging using c-TF-IDF
 
-.. image:: ../pics/BERTopic_overall_flowchart.png
+.. image:: files/pics/BERTopic_overall_flowchart.png
 
 
 Transformer Embedding
@@ -32,7 +32,7 @@ UMAP
 + Flexible non-linear dimension reduction algorithm
 + Learns the manifold structure of the data and find a low dimensional embedding that preserves the essential topological structure of that manifold
 
-.. image:: ../pics/BERTopic_UMAP_3D_diagram.png
+.. image:: files/pics/BERTopic_UMAP_3D_diagram.png
 
 
 HDBSCAN Clustering
@@ -43,7 +43,7 @@ HDBSCAN Clustering
 	* Flat or Hierarchical: Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
 	.. image:: files/pics/BERTopic_HDBSCAN_flat_or_hierarchical.png
 	* Centroid-based or Density-based: This means clustering based on proximity to a centroid or clustering based on the density of points. Centroid-based clustering is ideal for "spherical" clusters. Density-based clustering can handle more irregular shapes and identify outliers.
-	.. image:: files/pics/BERTopic_Centroid_Density_cluster.png
+
 	.. image:: files/pics/BERTopic_Centroid_Density_cluster_2.png
 
 
