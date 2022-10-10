@@ -39,7 +39,7 @@ HDBSCAN Clustering
 ------------------------
 ------------------------
 
-#. `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors
+#. `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors.
 #. There are mainly two types of clustering methods:
 	* Flat or Hierarchical: Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
 
@@ -68,3 +68,10 @@ HDBSCAN Clustering
 Topic Extraction with c-TF-IDF
 --------------------------------
 --------------------------------
+
+In the final step, BERTopic extracts topics for each of the clusters using a modified version on TF-IDF called c-TF-IDF.
+
+`TF_IDF`_ is a popular technique for identifying the most relevant “documents” given a term or set of terms. c-TF-IDF turns this on its head by finding the most relevant terms given all of the “documents” within a cluster.
+
+
+.. _TF_IDF: https://medium.com/analytics-vidhya/tf-idf-term-frequency-technique-easiest-explanation-for-text-classification-in-nlp-with-code-8ca3912e58c3
