@@ -2,7 +2,8 @@ BertTopic
 ****************************
 
 Introduction
-______________
+------------------------
+------------------------
 
 BERTopic is a topic modeling technique that leverages BERT embeddings and a class-based TF-IDF to create dense clusters allowing for easily interpretable topics whilst keeping important words in the topic descriptions.
 
@@ -102,3 +103,13 @@ Default Parameters
 Additional attributes can be found `here`_.
 
 .. _here: https://maartengr.github.io/BERTopic/index.html#attributes
+
+
+Model Execution
+------------------------
+------------------------
+
+
+Model Evaluation
+------------------------
+------------------------
