@@ -13,14 +13,14 @@ b) **Dirichlet**: Dirichlet is a distribution of distributions.Let's say we have
 
 c) **Allocation**: Once we have a Dirichlet distribution, we allocate topics to documents and words of the document to topics.
 
+.. image:: files/pics/LDA_high_level_overview_2.png
+
 Assumptions
 _____________
 
 #. LDA assumes that every chunk of text/document fed into it has words associated with each other.
 #. It also assumes documents are produced from a mixture of topics. These topics then generate words  
    based on their probability distribution.
-
-.. image:: files/pics/LDA_high_level_overview_2.png
 
 
 Default Parameters
