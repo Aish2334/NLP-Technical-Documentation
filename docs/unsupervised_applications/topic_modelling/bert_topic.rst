@@ -73,5 +73,30 @@ In the final step, BERTopic extracts topics for each of the clusters using a mod
 
 `TF_IDF`_ is a popular technique for identifying the most relevant “documents” given a term or set of terms. c-TF-IDF turns this on its head by finding the most relevant terms given all of the “documents” within a cluster.
 
+`Class Based TF_IDF`_: The goal of the class-based TF-IDF is to supply all documents within a single class with the same class vector. For this, we have to start looking at TF-IDF from a class-based point of view instead of individual documents. If documents are not individuals, but part of a larger collective, then it might be interesting to actually regard them as such by joining all documents in a class together.
 
 .. _TF_IDF: https://medium.com/analytics-vidhya/tf-idf-term-frequency-technique-easiest-explanation-for-text-classification-in-nlp-with-code-8ca3912e58c3
+.. _Class Based TF_IDF: https://maartengr.github.io/BERTopic/api/ctfidf.html
+
+.. image:: files/pics/c_TF_IDF_Overview_Flowchart.png
+
+Once we pick the most relevant terms for each cluster to derive topics, we can improve the coherence of words with `Maximal Marginal Relevance`_
+
+.. _Maximal Marginal Relevance: https://maartengr.github.io/BERTopic/api/mmr.html
+
+
+Default Parameters
+------------------------
+------------------------
+
+#. Below is an overview of common functions in BERTopic:
+
+.. image:: files/pics/BERTopic_default_params.png
+
+#. After having trained your BERTopic model, a number of attributes are saved within your model. These attributes, in part, refer to how model information is stored on an estimator during fitting. The attributes that you see below all end in _ and are public attributes that can be used to access model information.
+
+.. image:: files/pics/BERTopic_Additional_params.png
+
+Additional attributes can be found `here`_.
+
+.. _here: https://maartengr.github.io/BERTopic/index.html#attributes
