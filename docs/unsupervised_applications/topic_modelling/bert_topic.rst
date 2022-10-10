@@ -45,6 +45,11 @@ HDBSCAN Clustering
 	* Centroid-based or Density-based: This means clustering based on proximity to a centroid or clustering based on the density of points. Centroid-based clustering is ideal for "spherical" clusters. Density-based clustering can handle more irregular shapes and identify outliers.
 	.. image:: ../pics/BERTopic_Centroid_Density_cluster.png
 	.. image:: ../pics/BERTopic_Centroid_Density_cluster_2.png
+	:height: 100px
+    :width: 200 px
+    :scale: 50 %
+    :alt: alternate text
+    :align: right
 
 
 
