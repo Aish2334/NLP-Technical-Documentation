@@ -41,15 +41,15 @@ HDBSCAN Clustering
 #. `HDBSCAN`_ is used to cluster the (now)low-dimensional vectors
 #. There are mainly two types of clustering methods:
 	* Flat or Hierarchical: Focuses on whether there is (or is not) a hierarchy in the clustering method. For example, we may (ideally) view our graph hierarchy as moving from continents to countries to cities.
-	.. image:: ../pics/BERTopic_HDBSCAN_flat_or_hierarchical.png
+	.. image:: ../unsupervised_applications/files/pics/BERTopic_HDBSCAN_flat_or_hierarchical.png
 	* Centroid-based or Density-based: This means clustering based on proximity to a centroid or clustering based on the density of points. Centroid-based clustering is ideal for "spherical" clusters. Density-based clustering can handle more irregular shapes and identify outliers.
-	.. image:: ../pics/BERTopic_Centroid_Density_cluster.png
-	.. image:: ../pics/BERTopic_Centroid_Density_cluster_2.png
-	:height: 100px
-    :width: 200 px
-    :scale: 50 %
-    :alt: alternate text
-    :align: right
+	.. image:: ../unsupervised_applications/files/pics/BERTopic_Centroid_Density_cluster.png
+	.. image:: ../unsupervised_applications/files/pics/BERTopic_Centroid_Density_cluster_2.png
+	   :height: 100px
+       :width: 200 px
+       :scale: 50 %
+       :alt: alternate text
+       :align: right
 
 
 
