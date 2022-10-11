@@ -22,10 +22,10 @@ Transformer Embedding
 ------------------------
 
 * The first step is to embed documents into dimensional vectors.
-* BERTopic supports several libraries (Sentence Transformers, Flair, SpaCy, Gensim, USE TF Hub) for encoding our text to dense vector embeddings. Of these, `Sentence Transformers`_ library provides the most extensive library of high-performing sentence embedding models. 
+* BERTopic supports several libraries (Sentence Transformers, Flair, SpaCy, Gensim, USE TF Hub) for encoding our text to dense vector embeddings. Of these, `Sentence Transformers`_ library provides the most extensive library of high-performing sentence embedding models.
 * As the name implies, this embedding model works best for either sentences or paragraphs. This means that whenever you have a set of documents, where each document contains several paragraphs, BERTopic will struggle to accurately extract a topic from that document. Several paragraphs typically means several topics and BERTopic will assign only one topic to a document. Therefore, it is advised to split up longer documents into either sentences or paragraphs before embedding them. That way, BERTopic will have a much easier job identifying topics in isolation.
 
-* After building out embeddings, BERTopic compresses them into a lower-dimensional space. Thus, 384-dimensional vectors are transformed into two/three-dimensional vectors. To perform dimensionality reduction, we can use any of the popular choices such as `PCA`_, `tSNE`_, `UMAP`_, etc 
+* After building out embeddings, BERTopic compresses them into a lower-dimensional space. Thus, 384-dimensional vectors are transformed into two/three-dimensional vectors. To perform dimensionality reduction, we can use any of the popular choices such as `PCA`_, `tSNE`_, `UMAP`_, etc
 
 UMAP
 +++++++
@@ -53,7 +53,7 @@ HDBSCAN Clustering
 	.. image:: files/pics/BERTopic_Centroid_Density_cluster_2.png
 
 
-#. HDBSCAN is a hierarchical, density-based method. 
+#. HDBSCAN is a hierarchical, density-based method.
 #. This means that we can benefit from the easier tuning and visualization of hierarchical data, handle irregular cluster shapes, and identify outliers.
 #. HDBSCAN will identify and pick high-density regions, and eventually combine data points in these selected regions
 
@@ -108,6 +108,8 @@ Additional attributes can be found `here`_.
 Model Execution
 ------------------------
 ------------------------
+
+ABCD
 
 
 Model Evaluation
