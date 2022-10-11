@@ -73,12 +73,72 @@ After completing a certain number of iterations, we achieved a steady state wher
 Model Execution
 ___________________
 
-Add text here
+**Data Transformation**
+
+The two main inputs to the LDA topic model are the dictionary(id2word) and the corpus.
+
+* **Corpus**: Set of documents
+
+* **Dictionary**: Set of words in all the documents
+
+* *Step 1*: Import the library
+
+import gensim.corpora as corpora
+
+* *Step 2*: Create dictionary and corpus using the lemmatized data
+
+id2word = corpora.Dictionary(data_lemmatized)       # Dictionary
+
+texts = data_lemmatized     # Corpus
+
+* *Step 3*: Create the Term Document Frequency 
+
+corpus = [id2word.doc2bow(text) for text in texts]
+
+
+Gensim creates a unique id for each word in the document. The corpus produced above is a mapping of (word_id, word_frequency). For example, (0, 7) above implies, word id 0 occurs 7 times.
+
+**Base Model**
+
+* **corpus** is the set of documents (derived in the previous step)
+
+* **id2word** is the dictionary (derived in the previous step)
+
+* **num_topics** is the number of topics
+
+* **chunksize** controls how many documents are processed at a time in the training algorithm. Increasing chunksize will speed up training, at least as long as the chunk of documents easily fit into memory
+
+* **passes** controls how often we train the model on the entire corpus (set to 10). Another word for passes might be “epochs”. iterations is somewhat technical, but essentially it controls how often we repeat a particular loop over each document. It is important to set the number of “passes” and “iterations” high enough 
+
+# Build LDA model
+lda_model = gensim.models.LdaMulticore(corpus=corpus,
+                                       id2word=id2word,
+                                       num_topics=10, 
+                                       random_state=100,
+                                       chunksize=100,
+                                       passes=10,
+                                       per_word_topics=True)
+
+
+ 
 
 Model Evaluation Metrics
 _________________________
 
-Add text here
+**Coherence Measures**
+
+#. *C_v measure* is based on a sliding window, one-set segmentation of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
+#. *C_p* is based on a sliding window, one-preceding segmentation of the top words and the confirmation measure of Fitelson’s coherence
+#. *C_uci* measure is based on a sliding window and the pointwise mutual information (PMI) of all word pairs of the given top words
+# *C_umass* is based on document cooccurrence counts, a one-preceding segmentation and a logarithmic conditional probability as confirmation measure
+#. *C_npmi* is an enhanced version of the C_uci coherence using the normalized pointwise mutual information (NPMI)
+# *C_a* is baseed on a context window, a pairwise comparison of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
+
+from gensim.models import CoherenceModel
+# Compute Coherence Score
+coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
+coherence_lda = coherence_model_lda.get_coherence()
+
 
 Disadvantages
 ___________________
