@@ -114,6 +114,16 @@ Listed below are the steps involved in executing the BERT out of box model.
 1) Load the BERTopic model
 
 .. code-block:: python
+    # Build LDA model
+    lda_model = gensim.models.LdaMulticore(corpus=corpus,
+                                           id2word=id2word,
+                                           num_topics=10,
+                                           random_state=100,
+                                           chunksize=100,
+                                           passes=10,
+                                           per_word_topics=True)
+																					 
+.. code-block:: python
 	 pip install bertopic
 
 2) USAGE
