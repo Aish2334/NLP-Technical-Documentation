@@ -158,6 +158,7 @@ This command shows the intertopic distance map between the topics that were gene
 		model.visualize_topics()
 
 Visualize Probabilities:
+
 .. code-block:: python
 
 		model.visualize_distribution(probabilities[0])
@@ -174,7 +175,7 @@ Running Topic Models could generate hundreds of topics. This might sometimes be 
 
  This forces the model to split topics into 20 different topics. You can do this when you already have an idea of how many topics could be generated from the documents.
 
-	-Automatic Topic Reduction:
+- Automatic Topic Reduction:
 Most times, we are not aware of the number of topics that could ideally be generated from the documents. Automatic reduction reduces the number of topics iteratively as long as a pair of topics is found that exceeds a minimum similarity of 0.9.
 
 Model Evaluation
