@@ -113,9 +113,14 @@ Listed below are the steps involved in executing the BERT out of box model.
 
 1) Load the BERTopic model
 
+. code-block:: sql
+      :linenos:
+
+      SELECT * FROM mytable
+			
 
 .. code-block:: python
-		pip install bertopic
+.. pip install bertopic
 
 2) USAGE
 
