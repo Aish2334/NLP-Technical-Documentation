@@ -137,7 +137,7 @@ The input documents will be loaded in as a list of strings. The steps are straig
     	text = data['selftext']
 		else:
     	text = data['selftext'].tolist()
-
+			 
 		model = BERTopic(
     vectorizer_model=vectorizer_model,
     language='english', calculate_probabilities=True,
@@ -159,7 +159,7 @@ This command shows the intertopic distance map between the topics that were gene
 .. code-block:: python
 
 		model.visualize_topics()
-		
+
 
 Model Evaluation
 ------------------------
