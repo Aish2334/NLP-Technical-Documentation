@@ -126,18 +126,14 @@ The input documents will be loaded in as a list of strings. The steps are straig
 
 		from datasets import load_dataset
 		from sklearn.feature_extraction.text import CountVectorizer
-
 		data = load_dataset('jamescalam/reddit-python', split='train')
-
 		# we add this to remove stopwords, for lower volumes of data stopwords can cause issues
 		vectorizer_model = CountVectorizer(ngram_range=(1, 2), stop_words="english")
-
 		# deal with df if needed
 		if type(data['selftext']) is list:
     	text = data['selftext']
 		else:
     	text = data['selftext'].tolist()
-			 
 		model = BERTopic(
     vectorizer_model=vectorizer_model,
     language='english', calculate_probabilities=True,
