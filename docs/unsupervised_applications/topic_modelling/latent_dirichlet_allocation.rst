@@ -84,18 +84,21 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
 * *Step 1*: Import the library
 
 .. code-block:: python
+
     import gensim.corpora as corpora
 
 * *Step 2*: Create dictionary and corpus using the lemmatized data
 
 .. code-block:: python
+
     id2word = corpora.Dictionary(data_lemmatized)       # Dictionary
 
-texts = data_lemmatized     # Corpus
+    texts = data_lemmatized     # Corpus
 
 * *Step 3*: Create the Term Document Frequency 
 
 .. code-block:: python
+
     corpus = [id2word.doc2bow(text) for text in texts]
 
 
@@ -114,6 +117,7 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
 * **passes** controls how often we train the model on the entire corpus (set to 10). Another word for passes might be “epochs”. iterations is somewhat technical, but essentially it controls how often we repeat a particular loop over each document. It is important to set the number of “passes” and “iterations” high enough 
 
 .. code-block:: python
+
     # Build LDA model
     lda_model = gensim.models.LdaMulticore(corpus=corpus,
                                            id2word=id2word,
@@ -134,11 +138,12 @@ _________________________
 #. *C_v measure* is based on a sliding window, one-set segmentation of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
 #. *C_p* is based on a sliding window, one-preceding segmentation of the top words and the confirmation measure of Fitelson’s coherence
 #. *C_uci* measure is based on a sliding window and the pointwise mutual information (PMI) of all word pairs of the given top words
-# *C_umass* is based on document cooccurrence counts, a one-preceding segmentation and a logarithmic conditional probability as confirmation measure
+#. *C_umass* is based on document cooccurrence counts, a one-preceding segmentation and a logarithmic conditional probability as confirmation measure
 #. *C_npmi* is an enhanced version of the C_uci coherence using the normalized pointwise mutual information (NPMI)
-# *C_a* is baseed on a context window, a pairwise comparison of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
+#. *C_a* is baseed on a context window, a pairwise comparison of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
 
 .. code-block:: python
+
     from gensim.models import CoherenceModel
     # Compute Coherence Score
     coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
