@@ -112,6 +112,7 @@ Model Execution
 Listed below are the steps involved in executing the BERT out of box model.
 
 1) Load the BERTopic model
+First step as usual, is to install the necessary BERT packages using PyPI.
 
 .. code-block:: python
 
@@ -122,6 +123,7 @@ Listed below are the steps involved in executing the BERT out of box model.
 The input documents will be loaded in as a list of strings. The steps are straightforward. Load in the dataset and preprocess if needed( Remove stop words and convert to list). For smaller datasets, it is preferable to remove stopwords.
 
 .. code-block:: python
+
 	from datasets import load_dataset
 	from sklearn.feature_extraction.text import CountVectorizer
 	data = load_dataset('jamescalam/reddit-python', split='train')
