@@ -94,12 +94,32 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
     id2word = corpora.Dictionary(data_lemmatized)       # Dictionary
 
     texts = data_lemmatized     # Corpus
+    
+    print(id2word)
+    print(id2word.token2id)
+    
+**Output:**
+.. code-block:: python
+
+    Dictionary(27 unique tokens: ['CNTK', 'Computational', 'Network', 'Toolkit', 'as']...)
+    
+    {
+   'CNTK': 0, 'Computational': 1, 'Network': 2, 'Toolkit': 3, 'as': 4, 
+   'formerly': 5, 'known': 6, 'a': 7, 'commercial-grade': 8, 'easy-to-use': 9,
+   'free': 10, 'is': 11, 'open-source': 12, 'toolkit': 13, 'algorithms': 14,
+   'brain.': 15, 'deep': 16, 'enable': 17, 'human': 18, 'learn': 19, 'learning': 20,
+   'like': 21, 'that': 22, 'the': 23, 'to': 24, 'train': 25, 'us': 26
+    }
 
 * *Step 3*: Create the Term Document Frequency 
 
 .. code-block:: python
 
     corpus = [id2word.doc2bow(text) for text in texts]
+    # View
+    print(corpus[:1])
+    
+.. image:: files/pics/corpus.png    
 
 
 Gensim creates a unique id for each word in the document. The corpus produced above is a mapping of (word_id, word_frequency). For example, (0, 7) above implies, word id 0 occurs 7 times.
