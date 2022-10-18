@@ -99,6 +99,7 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
     print(id2word.token2id)
     
 **Output:**
+
 .. code-block:: python
 
     Dictionary(27 unique tokens: ['CNTK', 'Computational', 'Network', 'Toolkit', 'as']...)
