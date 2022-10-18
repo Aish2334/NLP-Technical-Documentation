@@ -106,15 +106,25 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
 
 **Base Model**
 
-* **corpus** is the set of documents (derived in the previous step)
-
-* **id2word** is the dictionary (derived in the previous step)
-
-* **num_topics** is the number of topics
-
-* **chunksize** controls how many documents are processed at a time in the training algorithm. Increasing chunksize will speed up training, at least as long as the chunk of documents easily fit into memory
-
-* **passes** controls how often we train the model on the entire corpus (set to 10). Another word for passes might be “epochs”. iterations is somewhat technical, but essentially it controls how often we repeat a particular loop over each document. It is important to set the number of “passes” and “iterations” high enough 
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| parameter		     | explanation                                                                               | data type       |
++============================+===========================================================================================+=================+
+| **corpus**                 | set of documents (derived in the previous step)                                           | int, float      |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **id2word**                | dictionary (derived in the previous step)                                                 | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **num_topics**             | number of topics                                                                          | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **chunksize**              | controls how many documents are processed at a time in the training algorithm             | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **passes**                 | controls how often we train the model on the entire corpus (set to 10)                    | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **workers**                | workers processes to be used for parallelization if none all available cores will be used | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **alpha**                  | hyperparameter to determine how many topics would exist in the document corpus            | float           |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **eta**                    | hyperparameter determines how many words are distributed to each topic                    | float           |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
 
 .. code-block:: python
 
