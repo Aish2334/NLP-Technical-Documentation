@@ -231,19 +231,29 @@ Link to the `Github`_ page
 OCTIS already supports the below models:test123
 
 .. list-table:: Title
-   :widths: 25 25 25
+   :widths: 100 100
    :header-rows: 1
 
    * -  Name
      - Implementation
-		 - test
    * - CTM (Bianchi et al. 2021)
      - ETM (Dieng et al. 2020)
 		 - HDP (Blei et al. 2004)
-   * - Row 2, column 1
+   * - https://github.com/MilaNLProc/contextualized-topic-models
      - Row 2, column 2
 		 - test
 
+		 +------------+------------------+
+		 | Name       | Implementation   |
+		 +============+==================+
+		 |  CTM (Bianchi et al. 2021) | column 2   |
+		 +------------+------------+
+		 | body row 1 | column 2   |
+		 +------------+------------+
+		 | body row 1 | column 2   |
+		 +------------+------------+
+		 | body row 1 | column 2   |
+		 +------------+------------+
 
 .. list-table:: Models already implemented in OCTIS
    :widths: 25 25
