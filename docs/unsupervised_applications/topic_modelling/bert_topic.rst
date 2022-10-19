@@ -223,6 +223,7 @@ We can use coherence score to measure the performance of BERTopic model using co
 **Using OCTIS**
 
 OCTIS (Optimizing and Comparing Topic models Is Simple) aims at training, analyzing and comparing Topic Models, whose optimal hyperparameters are estimated by means of a Bayesian Optimization approach
+
 Link to the `Github`_ page
 
 .. _Github: https://maartengr.github.io/BERTopic/index.html#attributes
@@ -245,7 +246,7 @@ OCTIS already supports the below models:
 
 
 .. list-table:: Models already implemented in OCTIS
-   :widths: 25 25
+   :widths: 25 25 25 25 25 25 25 25
    :header-rows: 1
 
 	 * - Name
