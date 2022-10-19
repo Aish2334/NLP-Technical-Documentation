@@ -234,11 +234,11 @@ OCTIS already supports the below models:test123
    :widths: 25 25
    :header-rows: 1
 
-   * - Heading row 1, column 1
-     - Heading row 1, column 2
-   * - Row 1, column 1
-     -
-		 -
+   * - Heading row 1, Name
+     - Heading row 1, Implementation
+   * - CTM (Bianchi et al. 2021)
+     - ETM (Dieng et al. 2020)
+		 - HDP (Blei et al. 2004)
    * - Row 2, column 1
      - Row 2, column 2
 		 - test
