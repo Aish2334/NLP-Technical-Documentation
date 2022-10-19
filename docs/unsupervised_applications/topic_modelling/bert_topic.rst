@@ -234,12 +234,18 @@ OCTIS already supports the below models:
    :widths: 100 100
    :header-rows: 1
 
-   * -  Name
+   * - Name
      - Implementation
    * - CTM (Bianchi et al. 2021)
      - https://github.com/MilaNLProc/contextualized-topic-models
    * - ETM (Dieng et al. 2020)
      - https://github.com/adjidieng/ETM
+
+
+
+
+
+
 	 * - HDP (Blei et al. 2004)
 	   - https://radimrehurek.com/gensim/
 	 * - LDA (Blei et al. 2003)
