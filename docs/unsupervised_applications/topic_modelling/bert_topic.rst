@@ -181,7 +181,7 @@ Running Topic Models could generate hundreds of topics. This might sometimes be 
  This forces the model to split topics into 20 different topics. You can do this when you already have an idea of how many topics could be generated from the documents.
 
 - Automatic Topic Reduction:
-Most times, we are not aware of the number of topics that could ideally be generated from the documents. Automatic reduction reduces the number of topics iteratively as long as a pair of topics is found that exceeds a minimum similarity of 0.9.
+	Most times, we are not aware of the number of topics that could ideally be generated from the documents. Automatic reduction reduces the number of topics iteratively as long as a pair of topics is found that exceeds a minimum similarity of 0.9.
 
 Model Evaluation
 ------------------------
@@ -191,7 +191,7 @@ Model Evaluation
 
 We can use coherence score to measure the performance of BERTopic model using coherence score. Coherence score is used to measure how interpretable the topics are to humans.
 
-..code-block:: python
+.. code-block:: python
 
 	import gensim.corpora as corpora
 	from gensim.models.coherencemodel import CoherenceModel
@@ -228,10 +228,9 @@ Link to the `Github`_ page
 
 OCTIS already supports the below models:
 
-.. list-table:: Title
+.. list-table:: Models already implemented in OCTIS
    :widths: 25 25 50
    :header-rows: 1
-
    * - Name
      - Implementation
    * - CTM (Bianchi et al. 2021)
