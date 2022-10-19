@@ -171,6 +171,7 @@ You can also visualize the probabilities of documents belonging to a certain top
 4. **Topic Reduction**
 
 Running Topic Models could generate hundreds of topics. This might sometimes be too much to explore and you may not require that level of granular knowledge. We use topic reduction to reduce the number of topics created. We can do this in 2 ways.
+
 - Manual Topic Reduction:
  .. code-block:: python
 
