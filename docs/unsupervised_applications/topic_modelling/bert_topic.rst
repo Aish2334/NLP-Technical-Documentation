@@ -231,7 +231,7 @@ Link to the `Github`_ page
 OCTIS already supports the below models:
 
 .. list-table:: Models already implemented in OCTIS
-   :widths: 100 100
+   :widths: 100 100 100
    :header-rows: 1
 
    * - Name
@@ -242,5 +242,6 @@ OCTIS already supports the below models:
      - https://github.com/adjidieng/ETM
 	 * - HDP (Blei et al. 2004)
 	   - https://radimrehurek.com/gensim/
+
 
 Since BERTopic is not implemented yet in the OCTIS module, we have to incorporate this model. Models inherit from the class AbstractModel defined in octis/models/model.py. To build your own model your class must override the train_model(self, dataset, hyperparameters) method which always requires at least a Dataset object and a Dictionary of hyperparameters as input and should return a dictionary with the output of the model as output.
