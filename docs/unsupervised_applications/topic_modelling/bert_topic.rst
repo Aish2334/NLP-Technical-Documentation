@@ -243,6 +243,7 @@ OCTIS already supports the below models:
      - Row 2, column 2
      - Row 2, column 3
 
+
 .. list-table:: Models already implemented in OCTIS
    :widths: 25 25
    :header-rows: 1
