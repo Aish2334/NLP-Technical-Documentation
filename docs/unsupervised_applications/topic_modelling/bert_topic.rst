@@ -231,7 +231,7 @@ Link to the `Github`_ page
 OCTIS already supports the below models:
 
 .. list-table:: Models already implemented in OCTIS
-   :widths: 100 100 100 100 100 100
+   :widths: 100 100 100 100 100 100 100 100
    :header-rows: 1
 
    * -  Name
