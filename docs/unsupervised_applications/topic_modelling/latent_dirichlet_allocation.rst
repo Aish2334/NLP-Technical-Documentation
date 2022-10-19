@@ -159,7 +159,16 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
                                            per_word_topics=True)
 
 
- 
+**View the topics in LDA model:**
+
+The above LDA model is built with 10 different topics where each topic is a combination of keywords and each keyword contributes a certain weightage to the topic. You can see the keywords for each topic and the weightage(importance) of each keyword using lda_model.print_topics()
+
+.. code-block:: python
+
+    from pprint import pprint
+    # Print the Keyword in the 10 topics
+    pprint(lda_model.print_topics())
+    doc_lda = lda_model[corpus]
 
 Model Evaluation Metrics
 _________________________
