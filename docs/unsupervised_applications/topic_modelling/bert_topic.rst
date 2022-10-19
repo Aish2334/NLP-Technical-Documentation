@@ -243,21 +243,4 @@ OCTIS already supports the below models:
 
 
 
-
-
-
-	 * - HDP (Blei et al. 2004)
-	   - https://radimrehurek.com/gensim/
-	 * - LDA (Blei et al. 2003)
-		 - https://radimrehurek.com/gensim/
-	 * - LSI (Landauer et al. 1998)
-		 - https://radimrehurek.com/gensim/
-	 * - NMF (Lee and Seung 2000)
-		 - https://radimrehurek.com/gensim/
-	 * - NeuralLDA (Srivastava and Sutton 2017)
-	   - https://github.com/estebandito22/PyTorchAVITM
-	 * - ProdLda (Srivastava and Sutton 2017)
-	   - https://github.com/estebandito22/PyTorchAVITM
-
-
 Since BERTopic is not implemented yet in the OCTIS module, we have to incorporate this model. Models inherit from the class AbstractModel defined in octis/models/model.py. To build your own model your class must override the train_model(self, dataset, hyperparameters) method which always requires at least a Dataset object and a Dictionary of hyperparameters as input and should return a dictionary with the output of the model as output.
