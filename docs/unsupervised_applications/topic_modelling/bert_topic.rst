@@ -246,13 +246,16 @@ OCTIS already supports the below models:
 
 
 .. list-table:: Models already implemented in OCTIS
-   :widths: 25 25 25 25 25 25 25 25
+   :widths: 25 25
    :header-rows: 1
 
 	 * - Name
      - Implementation
    * - CTM (Bianchi et al. 2021)
      - ETM (Dieng et al. 2020)
+
+
+
 		 - HDP (Blei et al. 2004)
 	   - LDA (Blei et al. 2003)
      - LSI (Landauer et al. 1998)
