@@ -167,8 +167,11 @@ The above LDA model is built with 10 different topics where each topic is a comb
 
     from pprint import pprint
     # Print the Keyword in the 10 topics
-    pprint(lda_model.print_topics())
+    print(lda_model.print_topics())
     doc_lda = lda_model[corpus]
+    
+    
+.. image:: files/pics/lda_model.png 
 
 Model Evaluation Metrics
 _________________________
