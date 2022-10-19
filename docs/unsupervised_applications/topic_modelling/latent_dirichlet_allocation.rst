@@ -140,19 +140,23 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
 | **passes**                 | controls how often we train the model on the entire corpus (set to 10)                    | int             |
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
-| **workers**                | workers processes to be used for parallelization if none all available cores will be used | int             |
-+----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+
+.. code-block:: python
+
+    # Importing Gensim libraries
+    import gensim
+    import gensim.corpora as corpora
+    from gensim.utils import simple_preprocess
+    from gensim.models import CoherenceModel
 
 .. code-block:: python
 
     # Build LDA model
-    lda_model = gensim.models.LdaMulticore(corpus=corpus,
+    lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                            id2word=id2word,
-                                           num_topics=10, 
-                                           random_state=100,
+                                           num_topics=20, 
                                            chunksize=100,
-                                           passes=10,
-                                           per_word_topics=True)
+                                           passes=10)
 
 
 **View the topics in LDA model:**
@@ -163,7 +167,7 @@ The above LDA model is built with 10 different topics where each topic is a comb
 
     from pprint import pprint
     # Print the Keyword in the 10 topics
-    print(lda_model.print_topics())
+    pprint(lda_model.print_topics())
     doc_lda = lda_model[corpus]
     
     
