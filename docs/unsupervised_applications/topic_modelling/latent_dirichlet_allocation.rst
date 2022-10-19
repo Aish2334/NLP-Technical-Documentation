@@ -81,13 +81,13 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
 * **Dictionary**: Set of words in all the documents
 
 
-#. *Step 1*: Import the library
+a) *Step 1*: Import the library
 
 .. code-block:: python
 
     import gensim.corpora as corpora
 
-#. *Step 2*: Create dictionary and corpus using the lemmatized data
+b) *Step 2*: Create dictionary and corpus using the lemmatized data
 
 .. code-block:: python
 
@@ -112,7 +112,7 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
    'like': 21, 'that': 22, 'the': 23, 'to': 24, 'train': 25, 'us': 26
     }
 
-#. *Step 3*: Create the Term Document Frequency 
+c) *Step 3*: Create the Term Document Frequency 
 
 .. code-block:: python
 
