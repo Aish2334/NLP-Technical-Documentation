@@ -228,7 +228,7 @@ Link to the `Github`_ page
 
 .. _Github: https://maartengr.github.io/BERTopic/index.html#attributes
 
-OCTIS already supports the below models:
+OCTIS already supports the below models:test123
 
 .. list-table:: Title
    :widths: 25 25
@@ -240,6 +240,8 @@ OCTIS already supports the below models:
      -
    * - Row 2, column 1
      - Row 2, column 2
+
+
 
 .. list-table:: Models already implemented in OCTIS
    :widths: 25 25
