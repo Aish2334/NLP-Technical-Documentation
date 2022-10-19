@@ -237,11 +237,10 @@ OCTIS already supports the below models:test123
    * -  Name
      - Implementation
    * - CTM (Bianchi et al. 2021)
-     - ETM (Dieng et al. 2020)
-		 - HDP (Blei et al. 2004)
-   * - https://github.com/MilaNLProc/contextualized-topic-models
-     - Row 2, column 2
-		 - test
+     - https://github.com/MilaNLProc/contextualized-topic-models
+   * - ETM (Dieng et al. 2020)s
+     - https://github.com/adjidieng/ETM
+
 
 		 +------------+------------------+
 		 | Name       | Implementation   |
