@@ -236,6 +236,7 @@ OCTIS already supports the below models:test123
 
    * -  Name
      - Implementation
+		 - test
    * - CTM (Bianchi et al. 2021)
      - ETM (Dieng et al. 2020)
 		 - HDP (Blei et al. 2004)
