@@ -81,13 +81,13 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
 * **Dictionary**: Set of words in all the documents
 
 
-* *Step 1*: Import the library
+#. *Step 1*: Import the library
 
 .. code-block:: python
 
     import gensim.corpora as corpora
 
-* *Step 2*: Create dictionary and corpus using the lemmatized data
+#. *Step 2*: Create dictionary and corpus using the lemmatized data
 
 .. code-block:: python
 
@@ -112,7 +112,7 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
    'like': 21, 'that': 22, 'the': 23, 'to': 24, 'train': 25, 'us': 26
     }
 
-* *Step 3*: Create the Term Document Frequency 
+#. *Step 3*: Create the Term Document Frequency 
 
 .. code-block:: python
 
@@ -141,10 +141,6 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
 | **passes**                 | controls how often we train the model on the entire corpus (set to 10)                    | int             |
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
 | **workers**                | workers processes to be used for parallelization if none all available cores will be used | int             |
-+----------------------------+-------------------------------------------------------------------------------------------+-----------------+
-| **alpha**                  | hyperparameter to determine how many topics would exist in the document corpus            | float           |
-+----------------------------+-------------------------------------------------------------------------------------------+-----------------+
-| **eta**                    | hyperparameter determines how many words are distributed to each topic                    | float           |
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
 
 .. code-block:: python
@@ -178,12 +174,13 @@ _________________________
 
 **Coherence Measures**
 
-#. *C_v measure* is based on a sliding window, one-set segmentation of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
-#. *C_p* is based on a sliding window, one-preceding segmentation of the top words and the confirmation measure of Fitelson’s coherence
-#. *C_uci* measure is based on a sliding window and the pointwise mutual information (PMI) of all word pairs of the given top words
-#. *C_umass* is based on document cooccurrence counts, a one-preceding segmentation and a logarithmic conditional probability as confirmation measure
-#. *C_npmi* is an enhanced version of the C_uci coherence using the normalized pointwise mutual information (NPMI)
-#. *C_a* is baseed on a context window, a pairwise comparison of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
+What a Topic Coherence Metric assesses is how well a topic is ‘supported’ by a text set (called reference corpus). It uses statistics and probabilities drawn from the reference corpus, especially focused on the word’s context, to give a coherence score to a topic.
+
+It's a composition of different independent modules, each one doing a specific function, that is joined together in a sequential pipeline:
+
+.. image:: files/pics/coherence.png
+
+That is, the topic coherence measure is a pipeline that receives the topics and the reference corpus as inputs and outputs a single real value meaning the ‘overall topic coherence’. The hope is that this process can assess topics in the same way that humans do.
 
 .. code-block:: python
 
