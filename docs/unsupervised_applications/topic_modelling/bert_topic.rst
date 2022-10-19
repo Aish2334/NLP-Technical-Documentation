@@ -228,9 +228,9 @@ Link to the `Github`_ page
 
 .. _Github: https://maartengr.github.io/BERTopic/index.html#attributes
 
-OCTIS already supports the below models:test123
+OCTIS already supports the below models:
 
-.. list-table:: Title
+.. list-table:: Models already implemented in OCTIS
    :widths: 100 100
    :header-rows: 1
 
@@ -238,42 +238,20 @@ OCTIS already supports the below models:test123
      - Implementation
    * - CTM (Bianchi et al. 2021)
      - https://github.com/MilaNLProc/contextualized-topic-models
-   * - ETM (Dieng et al. 2020)s
+   * - ETM (Dieng et al. 2020)
      - https://github.com/adjidieng/ETM
-
-
-		 +------------+------------------+
-		 | Name       | Implementation   |
-		 +============+==================+
-		 |  CTM (Bianchi et al. 2021) | column 2   |
-		 +------------+------------+
-		 | body row 1 | column 2   |
-		 +------------+------------+
-		 | body row 1 | column 2   |
-		 +------------+------------+
-		 | body row 1 | column 2   |
-		 +------------+------------+
-
-.. list-table:: Models already implemented in OCTIS
-   :widths: 25 25
-   :header-rows: 1
-
-	 * - Name
-     - Implementation
-   * - CTM (Bianchi et al. 2021)
-     - ETM (Dieng et al. 2020)
-		 - HDP (Blei et al. 2004)
-	   - LDA (Blei et al. 2003)
-     - LSI (Landauer et al. 1998)
-		 - NMF (Lee and Seung 2000)
-		 - NeuralLDA (Srivastava and Sutton 2017)
-		 - ProdLda (Srivastava and Sutton 2017)
-   * - https://github.com/MilaNLProc/contextualized-topic-models
-	 	 - https://github.com/adjidieng/ETM
+	 * - HDP (Blei et al. 2004)
+	   - https://radimrehurek.com/gensim/
+	 * - LDA (Blei et al. 2003)
 		 - https://radimrehurek.com/gensim/
+	 * - LSI (Landauer et al. 1998)
 		 - https://radimrehurek.com/gensim/
+	 * - NMF (Lee and Seung 2000)
 		 - https://radimrehurek.com/gensim/
-		 - https://github.com/estebandito22/PyTorchAVITM
-		 - https://github.com/estebandito22/PyTorchAVITM
+	 * - NeuralLDA (Srivastava and Sutton 2017)
+	   - https://github.com/estebandito22/PyTorchAVITM
+	 * - ProdLda (Srivastava and Sutton 2017)
+	   - https://github.com/estebandito22/PyTorchAVITM
+
 
 Since BERTopic is not implemented yet in the OCTIS module, we have to incorporate this model. Models inherit from the class AbstractModel defined in octis/models/model.py. To build your own model your class must override the train_model(self, dataset, hyperparameters) method which always requires at least a Dataset object and a Dictionary of hyperparameters as input and should return a dictionary with the output of the model as output.
