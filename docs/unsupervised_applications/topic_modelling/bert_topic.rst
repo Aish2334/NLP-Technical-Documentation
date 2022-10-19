@@ -238,9 +238,10 @@ OCTIS already supports the below models:test123
      - Heading row 1, column 2
    * - Row 1, column 1
      -
+		 -
    * - Row 2, column 1
      - Row 2, column 2
-
+		 - test
 
 
 .. list-table:: Models already implemented in OCTIS
@@ -251,9 +252,6 @@ OCTIS already supports the below models:test123
      - Implementation
    * - CTM (Bianchi et al. 2021)
      - ETM (Dieng et al. 2020)
-
-
-
 		 - HDP (Blei et al. 2004)
 	   - LDA (Blei et al. 2003)
      - LSI (Landauer et al. 1998)
