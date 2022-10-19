@@ -231,7 +231,7 @@ Link to the `Github`_ page
 OCTIS already supports the below models:test123
 
 .. list-table:: Title
-   :widths: 25 25
+   :widths: 25 25 25
    :header-rows: 1
 
    * -  Name
