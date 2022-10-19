@@ -81,66 +81,110 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
 * **Dictionary**: Set of words in all the documents
 
 
-* *Step 1*: Import the library
+a) *Step 1*: Import the library
 
 .. code-block:: python
 
     import gensim.corpora as corpora
 
-* *Step 2*: Create dictionary and corpus using the lemmatized data
+b) *Step 2*: Create dictionary and corpus using the lemmatized data
 
 .. code-block:: python
 
     id2word = corpora.Dictionary(data_lemmatized)       # Dictionary
 
     texts = data_lemmatized     # Corpus
+    
+    print(id2word)
+    print(id2word.token2id)
+    
+**Output:**
 
-* *Step 3*: Create the Term Document Frequency 
+.. code-block:: python
+
+    Dictionary(27 unique tokens: ['CNTK', 'Computational', 'Network', 'Toolkit', 'as']...)
+    
+    {
+   'CNTK': 0, 'Computational': 1, 'Network': 2, 'Toolkit': 3, 'as': 4, 
+   'formerly': 5, 'known': 6, 'a': 7, 'commercial-grade': 8, 'easy-to-use': 9,
+   'free': 10, 'is': 11, 'open-source': 12, 'toolkit': 13, 'algorithms': 14,
+   'brain.': 15, 'deep': 16, 'enable': 17, 'human': 18, 'learn': 19, 'learning': 20,
+   'like': 21, 'that': 22, 'the': 23, 'to': 24, 'train': 25, 'us': 26
+    }
+
+c) *Step 3*: Create the Term Document Frequency 
 
 .. code-block:: python
 
     corpus = [id2word.doc2bow(text) for text in texts]
+    # View
+    print(corpus[:1])
+    
+.. image:: files/pics/corpus.png    
 
 
 Gensim creates a unique id for each word in the document. The corpus produced above is a mapping of (word_id, word_frequency). For example, (0, 7) above implies, word id 0 occurs 7 times.
 
 **Base Model**
 
-* **corpus** is the set of documents (derived in the previous step)
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| parameter		     | explanation                                                                               | data type       |
++============================+===========================================================================================+=================+
+| **corpus**                 | set of documents (derived in the previous step)                                           | int, float      |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **id2word**                | dictionary (derived in the previous step)                                                 | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **num_topics**             | number of topics                                                                          | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **chunksize**              | controls how many documents are processed at a time in the training algorithm             | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
+| **passes**                 | controls how often we train the model on the entire corpus (set to 10)                    | int             |
++----------------------------+-------------------------------------------------------------------------------------------+-----------------+
 
-* **id2word** is the dictionary (derived in the previous step)
+.. code-block:: python
 
-* **num_topics** is the number of topics
-
-* **chunksize** controls how many documents are processed at a time in the training algorithm. Increasing chunksize will speed up training, at least as long as the chunk of documents easily fit into memory
-
-* **passes** controls how often we train the model on the entire corpus (set to 10). Another word for passes might be “epochs”. iterations is somewhat technical, but essentially it controls how often we repeat a particular loop over each document. It is important to set the number of “passes” and “iterations” high enough 
+    # Importing Gensim libraries
+    import gensim
+    import gensim.corpora as corpora
+    from gensim.utils import simple_preprocess
+    from gensim.models import CoherenceModel
 
 .. code-block:: python
 
     # Build LDA model
-    lda_model = gensim.models.LdaMulticore(corpus=corpus,
+    lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                            id2word=id2word,
-                                           num_topics=10, 
-                                           random_state=100,
+                                           num_topics=20, 
                                            chunksize=100,
-                                           passes=10,
-                                           per_word_topics=True)
+                                           passes=10)
 
 
- 
+**View the topics in LDA model:**
+
+The above LDA model is built with 10 different topics where each topic is a combination of keywords and each keyword contributes a certain weightage to the topic. You can see the keywords for each topic and the weightage(importance) of each keyword using lda_model.print_topics()
+
+.. code-block:: python
+
+    from pprint import pprint
+    # Print the Keyword in the 10 topics
+    pprint(lda_model.print_topics())
+    doc_lda = lda_model[corpus]
+    
+    
+.. image:: files/pics/lda_model.png 
 
 Model Evaluation Metrics
 _________________________
 
 **Coherence Measures**
 
-#. *C_v measure* is based on a sliding window, one-set segmentation of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
-#. *C_p* is based on a sliding window, one-preceding segmentation of the top words and the confirmation measure of Fitelson’s coherence
-#. *C_uci* measure is based on a sliding window and the pointwise mutual information (PMI) of all word pairs of the given top words
-#. *C_umass* is based on document cooccurrence counts, a one-preceding segmentation and a logarithmic conditional probability as confirmation measure
-#. *C_npmi* is an enhanced version of the C_uci coherence using the normalized pointwise mutual information (NPMI)
-#. *C_a* is baseed on a context window, a pairwise comparison of the top words and an indirect confirmation measure that uses normalized pointwise mutual information (NPMI) and the cosine similarity
+What a Topic Coherence Metric assesses is how well a topic is ‘supported’ by a text set (called reference corpus). It uses statistics and probabilities drawn from the reference corpus, especially focused on the word’s context, to give a coherence score to a topic.
+
+It's a composition of different independent modules, each one doing a specific function, that is joined together in a sequential pipeline:
+
+.. image:: files/pics/coherence.png
+
+That is, the topic coherence measure is a pipeline that receives the topics and the reference corpus as inputs and outputs a single real value meaning the ‘overall topic coherence’. The hope is that this process can assess topics in the same way that humans do.
 
 .. code-block:: python
 
@@ -148,6 +192,12 @@ _________________________
     # Compute Coherence Score
     coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
     coherence_lda = coherence_model_lda.get_coherence()
+    
+    print('\nCoherence Score: ', coherence_lda)
+    
+.. code-block:: python
+
+   Coherence Score: 0.301
 
 
 Disadvantages
