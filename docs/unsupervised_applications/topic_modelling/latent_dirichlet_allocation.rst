@@ -81,13 +81,13 @@ The two main inputs to the LDA topic model are the dictionary(id2word) and the c
 * **Dictionary**: Set of words in all the documents
 
 
-a) *Step 1*: Import the library
+a) Import the library
 
 .. code-block:: python
 
     import gensim.corpora as corpora
 
-b) *Step 2*: Create dictionary and corpus using the lemmatized data
+b) Create dictionary and corpus using the lemmatized data
 
 .. code-block:: python
 
@@ -112,7 +112,7 @@ b) *Step 2*: Create dictionary and corpus using the lemmatized data
    'like': 21, 'that': 22, 'the': 23, 'to': 24, 'train': 25, 'us': 26
     }
 
-c) *Step 3*: Create the Term Document Frequency 
+c) Create the Term Document Frequency 
 
 .. code-block:: python
 
@@ -128,7 +128,7 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
 **Base Model**
 
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
-| parameter		     | explanation                                                                               | data type       |
+| Parameter		     | Explanation                                                                               | Data type       |
 +============================+===========================================================================================+=================+
 | **corpus**                 | set of documents (derived in the previous step)                                           | int, float      |
 +----------------------------+-------------------------------------------------------------------------------------------+-----------------+
@@ -159,13 +159,14 @@ Gensim creates a unique id for each word in the document. The corpus produced ab
                                            passes=10)
 
 
-**View the topics in LDA model:**
+**View the topics in LDA model**
 
 The above LDA model is built with 10 different topics where each topic is a combination of keywords and each keyword contributes a certain weightage to the topic. You can see the keywords for each topic and the weightage(importance) of each keyword using lda_model.print_topics()
 
 .. code-block:: python
 
     from pprint import pprint
+    
     # Print the Keyword in the 10 topics
     pprint(lda_model.print_topics())
     doc_lda = lda_model[corpus]
@@ -189,6 +190,7 @@ That is, the topic coherence measure is a pipeline that receives the topics and 
 .. code-block:: python
 
     from gensim.models import CoherenceModel
+    
     # Compute Coherence Score
     coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
     coherence_lda = coherence_model_lda.get_coherence()
