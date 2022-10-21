@@ -166,6 +166,9 @@ Visualize Probabilities:
 
 		model.visualize_distribution(probabilities[0])
 
+.. image:: files/pics/probability_BERT.png
+
+
 You can also visualize the probabilities of documents belonging to a certain topic. Probabilities helps us understand how confident the model is for each instance.
 
 4. **Topic Reduction**
@@ -183,6 +186,17 @@ Running Topic Models could generate hundreds of topics. This might sometimes be 
 - Automatic Topic Reduction:
 
  Most times, we are not aware of the number of topics that could ideally be generated from the documents. Automatic reduction reduces the number of topics iteratively as long as a pair of topics is found that exceeds a minimum similarity of 0.9.
+
+- Topic Reduction after Training:
+
+ This method is used when you want to reduce the number of topics after you have trained the model.
+	 .. code-block:: python
+
+	 	from bertopic import BERTopic
+	 	model = BERTopic()
+	 	topics, probs = model.fit_transform(docs)
+	 	# Further reduce topics
+	 	new_topics, new_probs = model.reduce_topics(docs, topics, probs, nr_topics=30)
 
 Model Evaluation
 ------------------------
@@ -242,7 +256,7 @@ OCTIS already supports the below models:
      - https://github.com/adjidieng/ETM
 	 * - ETM (Dieng et al. 2020)
 	 	 - https://github.com/adjidieng/ETM
-	 
+
 
 
 Since BERTopic is not implemented yet in the OCTIS module, we have to incorporate this model. Models inherit from the class AbstractModel defined in octis/models/model.py. To build your own model your class must override the train_model(self, dataset, hyperparameters) method which always requires at least a Dataset object and a Dictionary of hyperparameters as input and should return a dictionary with the output of the model as output.
