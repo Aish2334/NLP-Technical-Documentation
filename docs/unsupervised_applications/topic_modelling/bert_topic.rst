@@ -88,9 +88,12 @@ Once we pick the most relevant terms for each cluster to derive topics, we can i
 .. _Maximal Marginal Relevance: https://maartengr.github.io/BERTopic/api/mmr.html
 
 
-Default Parameters
+
+Model Execution
 ------------------------
 ------------------------
+
+
 
 1) Below is an overview of common functions in BERTopic:
 
@@ -105,9 +108,6 @@ Additional attributes can be found `here`_.
 .. _here: https://maartengr.github.io/BERTopic/index.html#attributes
 
 
-Model Execution
-------------------------
-------------------------
 
 Listed below are the steps involved in executing the BERT out of box model.
 
