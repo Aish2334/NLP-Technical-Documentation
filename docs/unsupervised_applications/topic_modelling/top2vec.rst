@@ -21,3 +21,18 @@ Important usage of Top2Vec is as follows:
 Algorithm Explained
 ------------------------
 ------------------------
+
+Following are the steps in this modelling technique:
+	- Word and Vector embedding
+	- UMAP Dimensionality Reduction
+	- HDBSCAN Clustering
+	- Centroid calculation and topic assignment
+
+Word and Vector embedding
+---------------------------
+
+This step includes the generation of embedding vectors that allows us to represent the text document in the mathematical framework. This framework can be multi-dimensional where the dimension depends on the word or text document. This can be performed using `Doc2Vec`_ or `Universal Sentence Encoder`_ or `BERT Sentence Transformer`_.
+
+.. _BERT Sentence Transformer: https://www.pinecone.io/learn/sentence-embeddings/
+.. _Doc2Vec: https://medium.com/swlh/t-sne-explained-math-and-intuition-94599ab164cf
+.. _Universal Sentence Encoder: https://towardsdatascience.com/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d
