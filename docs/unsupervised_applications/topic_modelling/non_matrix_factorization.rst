@@ -34,7 +34,7 @@ Algorithm Explained
 
 The main core of unsupervised learning techniques such as NMF is the quantification of distance between the elements. The distance can be measured by various methods. Two of the generally used methods are:
 
-#. **Generalized Kullback–Leibler divergence**
+1) **Generalized Kullback–Leibler divergence**
 	
 	It is a statistical measure which is used to quantify how one distribution is different from another. Closer the value of Kullback–Leibler divergence to zero, the closeness of the corresponding words increases. In other words, the divergence value is less.
 
@@ -42,7 +42,7 @@ The main core of unsupervised learning techniques such as NMF is the quantificat
 
 .. image:: files/pics/NMF_Leibler_Equation.png	
 
-#. **Frobenius Norm**
+2) **Frobenius Norm**
 	
 	The other method of performing NMF is by using Frobenius norm. It is defined by the square root of sum of absolute squares of its elements. It is also known as eucledian norm. The formula is given below:
 
