@@ -72,7 +72,7 @@ ___________________________________________
 
 Once we have clusters for each document, we can simply treat each cluster of documents as a separate topic in the topic model. Each topic can be represented as a topic vector that is essentially just the centroid (average point) of the original documents belonging to that topic cluster. 
 
-.. image:: files/pics/Top2vec_centroid_calcuation.png
+.. image:: files/pics/Top2vec_centroid_calculation.png
 
 In order to label the topic using a set of keywords, we can compute the n-closest words to the topic centroid vector.
 
