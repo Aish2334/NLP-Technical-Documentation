@@ -48,8 +48,7 @@ The main core of unsupervised learning techniques such as NMF is the quantificat
 
 .. image:: files/pics/NMF_Frobenius_Equation.png
 
-
-	An optimization process is mandatory to improve the model and achieve high accuracy in finding relation between the topics.
+An optimization process is mandatory to improve the model and achieve high accuracy in finding relation between the topics.
 
 
 Performance Optimization
