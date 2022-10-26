@@ -79,5 +79,6 @@ Conclusion
 ------------------------
 ------------------------
 
-*. NMF by default produces sparse representations. This mean that most of the entries are close to zero and only very few parameters have significant values. This can be used when we strictly require fewer topics.
-*. NMF produces more coherent topics compared to LDA.
+* NMF by default produces sparse representations. This mean that most of the entries are close to zero and only very few parameters have significant values. This can be used when we strictly require fewer topics.
+
+* NMF produces more coherent topics compared to LDA.
