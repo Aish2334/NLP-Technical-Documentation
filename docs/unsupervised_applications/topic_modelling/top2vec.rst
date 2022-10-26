@@ -67,3 +67,31 @@ HDBSCAN is used to find the dense areas of document vectors, as it was designed 
 .. image:: files/pics/Top2vec_HDBSCAN.png
 
 
+Centroid Calculation and Topic Assignment
+___________________________________________
+
+Once we have clusters for each document, we can simply treat each cluster of documents as a separate topic in the topic model. Each topic can be represented as a topic vector that is essentially just the centroid (average point) of the original documents belonging to that topic cluster. 
+
+.. image:: files/pics/Top2vec_centroid_calcuation.png
+
+In order to label the topic using a set of keywords, we can compute the n-closest words to the topic centroid vector.
+
+.. image:: files/pics/Top2vec_topic_assignment.png
+
+
+Model Execution
+__________________
+
+
+
+
+Model Evaluation
+___________________
+
+
+
+
+Conclusion
+___________________________________________
+
+While Top2Vec is much more complex than the standard LDA approach to topic modeling, it may be able to give us better results since the embedding vectors for words and documents can effectively capture the meaning of words and phrases.
