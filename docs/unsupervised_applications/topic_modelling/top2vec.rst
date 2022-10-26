@@ -80,18 +80,21 @@ In order to label the topic using a set of keywords, we can compute the n-closes
 
 
 Model Execution
-__________________
+------------------------
+------------------------
 
 
 
 
 Model Evaluation
-___________________
+------------------------
+------------------------
 
 
 
 
 Conclusion
-___________________________________________
+------------------------
+------------------------
 
 While Top2Vec is much more complex than the standard LDA approach to topic modeling, it may be able to give us better results since the embedding vectors for words and documents can effectively capture the meaning of words and phrases.
