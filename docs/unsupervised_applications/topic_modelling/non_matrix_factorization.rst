@@ -67,6 +67,14 @@ To improve the model and achieve high accuracy, there are two types of optimizat
 Here we parallelly update the values and using the new matrices that we get after updation W and H, we again compute the reconstruction error and repeat this process until we converge.
 
 
+Model Execution
+------------------------
+------------------------
+
+Model Evaluation
+------------------------
+------------------------
+
 Conclusion
 ------------------------
 ------------------------
