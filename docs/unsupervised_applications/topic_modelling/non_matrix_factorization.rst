@@ -50,3 +50,26 @@ The main core of unsupervised learning techniques such as NMF is the quantificat
 
 	An optimization process is mandatory to improve the model and achieve high accuracy in finding relation between the topics.
 
+
+Performance Optimization
+------------------------
+------------------------
+
+To improve the model and achieve high accuracy, there are two types of optimization algorithms that we can implement:
+
+	#. Coordinate Descent Solver
+	#. Multiplicative Update Solver
+
+	In this technique, we can calculate matrices W and H by optimizing over an objective function (like the EM algorithm), and updates both the matrices W and H iteratively until convergence. We try to measure the error of reconstruction between the matrix A and the product of its factors W and H, on the basis of Euclidean distance.
+
+.. image:: files/pics/NMF_perf_opt.png
+
+Here we parallelly update the values and using the new matrices that we get after updation W and H, we again compute the reconstruction error and repeat this process until we converge.
+
+
+Conclusion
+------------------------
+------------------------
+
+*. NMF by default produces sparse representations. This mean that most of the entries are close to zero and only very few parameters have significant values. This can be used when we strictly require fewer topics.
+*. NMF produces more coherent topics compared to LDA.
