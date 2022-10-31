@@ -94,12 +94,11 @@ Model Execution
 ------------------------
 
 
-
-1) Below is an overview of common functions in BERTopic:
+ Below is an overview of common functions in BERTopic:
 
 .. image:: files/pics/BERTopic_default_params.png
 
-2) After having trained your BERTopic model, a number of attributes are saved within your model. These attributes, in part, refer to how model information is stored on an estimator during fitting. The attributes that you see below all end in _ and are public attributes that can be used to access model information.
+ After having trained your BERTopic model, a number of attributes are saved within your model. These attributes, in part, refer to how model information is stored on an estimator during fitting. The attributes that you see below all end in _ and are public attributes that can be used to access model information.
 
 .. image:: files/pics/BERTopic_Additional_params.png
 
