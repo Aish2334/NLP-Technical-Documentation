@@ -213,7 +213,6 @@ Using a custom CountVectorizer
 ..code-block:: python
 
 		from sklearn.feature_extraction.text import CountVectorizer
-
 		cv = CountVectorizer(ngram_range=(1, 3), stop_words="english")
 		model.update_topics(docs, topics, vectorizer=cv)
 
