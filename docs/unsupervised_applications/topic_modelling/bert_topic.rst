@@ -176,6 +176,7 @@ You can also visualize the probabilities of documents belonging to a certain top
 Running Topic Models could generate hundreds of topics. This might sometimes be too much to explore and you may not require that level of granular knowledge. We use topic reduction to reduce the number of topics created. We can do this in 2 ways.
 
 - Manual Topic Reduction:
+
  .. code-block:: python
 
  		from bertopic import BertTopic
@@ -191,7 +192,7 @@ Running Topic Models could generate hundreds of topics. This might sometimes be 
 
  This method is used when you want to reduce the number of topics after you have trained the model.
 
-	 .. code-block:: python
+	.. code-block:: python
 
 	 	from bertopic import BERTopic
 	 	model = BERTopic()
@@ -220,6 +221,7 @@ Using a custom CountVectorizer
 If you dont want to use pre-trained embedddings and created an embedding model, embed your documents with the model you trained and pass the embeddings to BERTopic.
 
 ..code-block:: python
+
 		from bertopic import BERTopic
 		from sentence_transformers import SentenceTransformer
 
@@ -244,14 +246,11 @@ We can use coherence score to measure the performance of BERTopic model using co
 
 	import gensim.corpora as corpora
 	from gensim.models.coherencemodel import CoherenceModel
-
 	# Preprocess documents
 	cleaned_docs = topic_model._preprocess_text(docs)
-
 	# Extract vectorizer and tokenizer from BERTopic
 	vectorizer = topic_model.vectorizer_model
 	tokenizer = vectorizer.build_tokenizer()
-
 	# Extract features for Topic Coherence evaluation
 	words = vectorizer.get_feature_names()
 	tokens = [tokenizer(doc) for doc in cleaned_docs]
@@ -259,7 +258,6 @@ We can use coherence score to measure the performance of BERTopic model using co
 	corpus = [dictionary.doc2bow(token) for token in tokens]
 	topic_words = [[words for words, _ in topic_model.get_topic(topic)]
 						 for topic in range(len(set(topics))-1)]
-
 	# Evaluate
 	coherence_model = CoherenceModel(topics=topic_words,
 											 texts=tokens,
@@ -278,19 +276,7 @@ The corresponding link to the associated Github page can be found `here`
 
 OCTIS already supports the below models:
 
-.. list-table:: Models already implemented in OCTIS
-   :widths: 100 100
-   :header-rows: 1
-
-   * - Name
-     - Implementation
-   * - CTM (Bianchi et al. 2021)
-     - https://github.com/MilaNLProc/contextualized-topic-models
-   * - ETM (Dieng et al. 2020)
-     - https://github.com/adjidieng/ETM
-	 * - ETM (Dieng et al. 2020)
-	 	 - https://github.com/adjidieng/ETM
-
+.. image:: files/pics/OCTIS_list.png
 
 
 Since BERTopic is not implemented yet in the OCTIS module, we have to incorporate this model. Models inherit from the class AbstractModel defined in octis/models/model.py. To build your own model your class must override the train_model(self, dataset, hyperparameters) method which always requires at least a Dataset object and a Dictionary of hyperparameters as input and should return a dictionary with the output of the model as output.
